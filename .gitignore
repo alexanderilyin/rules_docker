@@ -43,6 +43,7 @@ bazel-bin
 bazel-genfiles
 bazel-out
 bazel-testlogs
+.cache
 
 # Eclipse and PyDev
 .project
