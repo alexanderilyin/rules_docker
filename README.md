@@ -354,6 +354,18 @@ Hello, busybox.
 
 ## Examples
 
+### Run examples in Docker
+
+```
+export WORKSPACE=github.com/alexanderilyin/rules_docker
+git clone git@github.com:alexanderilyin/rules_docker.git ${WORKSPACE}
+cd ${WORKSPACE}
+docker-compose run bazel test \
+    --incompatible_string_join_requires_strings=false \
+    --sandbox_debug \
+    //...
+```
+
 ### container_image
 
 ```python

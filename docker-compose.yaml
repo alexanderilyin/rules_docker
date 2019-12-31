@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  bazel:
+    working_dir: $PWD/testing/examples
+    image: l.gcr.io/google/bazel:1.2.1
+    volumes: 
+        - $PWD:$PWD
+        - /var/run/docker.sock:/var/run/docker.sock
+        - $PWD/.cache:/root/.cache
